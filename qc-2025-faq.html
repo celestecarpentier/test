@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foire aux questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .question {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        .answer {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .question:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Foire aux questions (FAQ)</h1>
+
+    <div class="faq-item">
+        <button class="question">Qu'est-ce que ce site ?</button>
+        <div class="answer">
+            <p>C'est une page d'exemple pour une foire aux questions, où vous pouvez cliquer sur chaque question pour afficher la réponse correspondante.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="question">Comment fonctionne le système de FAQ ?</button>
+        <div class="answer">
+            <p>Lorsque vous cliquez sur une question, la réponse se dévoile en dessous grâce à un simple script JavaScript.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="question">Puis-je ajouter plus de questions ?</button>
+        <div class="answer">
+            <p>Oui, vous pouvez ajouter autant de questions et de réponses que vous le souhaitez en copiant et modifiant le code existant.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="question">Comment personnaliser ce code ?</button>
+        <div class="answer">
+            <p>Vous pouvez modifier le code HTML, CSS et JavaScript pour adapter le design et les fonctionnalités à vos besoins.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Fonction pour afficher/masquer la réponse au clic sur la question
+    const questions = document.querySelectorAll('.question');
+    
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
